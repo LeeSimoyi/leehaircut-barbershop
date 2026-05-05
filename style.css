@@ -1101,6 +1101,99 @@ h1, h2, h3, h4 {
   right: -80px;
 }
 
+/* =========================== LIMITED OFFERS SECTION =========================== */
+.offers{
+  position: relative;
+  padding: 100px 8%;
+  overflow: hidden;
+  background: url("https://images.unsplash.com/photo-1621605815971-fbc98d665033?auto=format&fit=crop&w=1600&q=80") center/cover no-repeat;
+}
+
+.offers-overlay{
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.70);
+  z-index: 1;
+}
+
+.offers-container{
+  position: relative;
+  z-index: 2;
+}
+
+.section-header{
+  margin-bottom: 50px;
+}
+
+.section-header.center{
+  text-align: center;
+}
+
+.sub-title{
+  color: #ff2b2b;
+  font-size: 14px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.section-header h2{
+  font-size: 42px;
+  color: #fff;
+  margin: 10px 0;
+}
+
+.section-header p{
+  color: #ddd;
+  max-width: 600px;
+  margin: auto;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.offer-grid{
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 25px;
+}
+
+.offer-card{
+  position: relative;
+  background: rgba(255,255,255,0.08);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255,255,255,0.1);
+  color: #fff;
+  padding: 45px 30px;
+  border-radius: 18px;
+  text-align: center;
+  transition: 0.4s ease;
+  cursor: pointer;
+}
+
+.offer-card:hover{
+  transform: translateY(-10px);
+  box-shadow: 0 15px 40px rgba(255,43,43,0.25);
+}
+
+.offer-badge{
+  display: inline-block;
+  background: #ff2b2b;
+  padding: 6px 14px;
+  font-size: 12px;
+  border-radius: 30px;
+  margin-bottom: 18px;
+  font-weight: 600;
+}
+
+.offer-card h3{
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.offer-card p{
+  font-size: 17px;
+  color: #eee;
+}
 
 /* ============================== PRICING SECTION ==================================== */
 .pricing {
@@ -1888,6 +1981,13 @@ h1, h2, h3, h4 {
     font-size: 2rem;
   }
 
+  .offer-grid{
+    grid-template-columns: repeat(2,1fr);
+  }
+
+  .offers .section-header h2{
+    font-size: 36px;
+  }
   .why-grid {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -1958,7 +2058,25 @@ h1, h2, h3, h4 {
   .img-box img {
     height: 200px;
   }
+  .offers{
+    padding: 80px 5%;
+  }
 
+  .offer-grid{
+    grid-template-columns: 1fr;
+  }
+
+  .offers .section-header h2{
+    font-size: 30px;
+  }
+
+  .offer-card{
+    padding: 35px 20px;
+  }
+
+  .offer-card h3{
+    font-size: 28px;
+  }
   .trust-container {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -2081,6 +2199,21 @@ h1, h2, h3, h4 {
   .book-btn {
     padding: 6px 14px;
     font-size: 0.75rem;
+  }
+  .section-header h2{
+    font-size: 26px;
+  }
+
+  .offers .section-header p{
+    font-size: 14px;
+  }
+
+  .offer-card h3{
+    font-size: 24px;
+  }
+
+  .offer-card p{
+    font-size: 15px;
   }
 
 }
