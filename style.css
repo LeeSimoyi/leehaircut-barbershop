@@ -244,8 +244,7 @@ h1, h2, h3, h4 {
 }
 
 
-/* =================  HERO SECTION ================= */
-
+/* ======================  HERO SECTION ======================= */
 .hero {
   position: relative;
   min-height: 100vh;
@@ -285,7 +284,6 @@ h1, h2, h3, h4 {
   animation: heroFade 1s ease;
 }
 
-/* Premium Badge */
 .hero-badge {
   display: inline-flex;
   align-items: center;
@@ -308,7 +306,6 @@ h1, h2, h3, h4 {
   font-size: 14px;
 }
 
-/* Main Heading */
 .hero-inner h1 {
   font-size: 4.2rem;
   font-weight: 900;
@@ -322,7 +319,6 @@ h1, h2, h3, h4 {
   text-shadow: 0 0 25px rgba(255,43,43,0.35);
 }
 
-/* Paragraph */
 .hero-inner p {
   font-size: 1.15rem;
   line-height: 1.9;
@@ -331,7 +327,6 @@ h1, h2, h3, h4 {
   margin: 0 auto 35px;
 }
 
-/* Buttons */
 .hero-buttons {
   display: flex;
   justify-content: center;
@@ -340,7 +335,6 @@ h1, h2, h3, h4 {
   margin-bottom: 45px;
 }
 
-/* Stats */
 .hero-stats {
   display: flex;
   justify-content: center;
@@ -368,7 +362,6 @@ h1, h2, h3, h4 {
   color: #ddd;
 }
 
-/* Scroll Down */
 .scroll-down {
   margin-top: 40px;
   display: flex;
@@ -416,76 +409,6 @@ h1, h2, h3, h4 {
   to {
     opacity: 1;
     transform: translateY(0);
-  }
-}
-
-/* ================= MOBILE ================= */
-
-@media (max-width: 992px) {
-
-  .hero-inner h1 {
-    font-size: 3.2rem;
-  }
-
-  .hero-stat {
-    min-width: 140px;
-  }
-}
-
-@media (max-width: 768px) {
-
-  .hero-content {
-    padding: 110px 5% 60px;
-  }
-
-  .hero-inner h1 {
-    font-size: 2.5rem;
-  }
-
-  .hero-inner p {
-    font-size: 1rem;
-  }
-
-  .hero-badge {
-    font-size: 0.85rem;
-    padding: 10px 18px;
-  }
-
-  .hero-stats {
-    gap: 12px;
-  }
-
-  .hero-stat {
-    min-width: 120px;
-    padding: 14px;
-  }
-
-  .hero-stat h3 {
-    font-size: 1.3rem;
-  }
-}
-
-@media (max-width: 480px) {
-
-  .hero-inner h1 {
-    font-size: 2rem;
-  }
-
-  .hero-buttons {
-    flex-direction: column;
-    gap: 14px;
-  }
-
-  .hero-buttons .btn {
-    width: 100%;
-  }
-
-  .hero-stats {
-    flex-direction: column;
-  }
-
-  .scroll-down {
-    display: none;
   }
 }
 
@@ -1102,95 +1025,95 @@ h1, h2, h3, h4 {
 }
 
 /* =========================== LIMITED OFFERS SECTION =========================== */
+
 .offers{
   position: relative;
   padding: 100px 8%;
-  overflow: hidden;
   background: url("https://images.unsplash.com/photo-1621605815971-fbc98d665033?auto=format&fit=crop&w=1600&q=80") center/cover no-repeat;
+  overflow: hidden;
 }
 
-.offers-overlay{
+.offers .offers-overlay{
   position: absolute;
   inset: 0;
-  background: rgba(0,0,0,0.70);
-  z-index: 1;
+  background: rgba(0,0,0,0.72);
 }
 
-.offers-container{
+.offers .offers-container{
   position: relative;
   z-index: 2;
 }
 
-.section-header{
-  margin-bottom: 50px;
-}
-
-.section-header.center{
+/* Header */
+.offers .section-header{
   text-align: center;
+  margin-bottom: 55px;
 }
 
-.sub-title{
+.offers .section-header .sub-title{
+  display: inline-block;
   color: #ff2b2b;
   font-size: 14px;
-  letter-spacing: 2px;
   text-transform: uppercase;
-  font-weight: 600;
+  letter-spacing: 2px;
+  font-weight: 700;
 }
 
-.section-header h2{
-  font-size: 42px;
+.offers .section-header h2{
   color: #fff;
+  font-size: 42px;
   margin: 10px 0;
 }
 
-.section-header p{
+.offers .section-header p{
   color: #ddd;
+  font-size: 16px;
   max-width: 600px;
   margin: auto;
-  font-size: 16px;
-  line-height: 1.6;
+  line-height: 1.7;
 }
 
-.offer-grid{
+/* Grid */
+.offers .offer-grid{
   display: grid;
-  grid-template-columns: repeat(3,1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 25px;
 }
 
-.offer-card{
+/* Cards */
+.offers .offer-grid .offer-card{
   position: relative;
-  background: rgba(255,255,255,0.08);
-  backdrop-filter: blur(8px);
-  border: 1px solid rgba(255,255,255,0.1);
-  color: #fff;
   padding: 45px 30px;
-  border-radius: 18px;
   text-align: center;
+  color: #fff;
+  border-radius: 18px;
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.10);
+  backdrop-filter: blur(8px);
   transition: 0.4s ease;
-  cursor: pointer;
 }
 
-.offer-card:hover{
+.offers .offer-grid .offer-card:hover{
   transform: translateY(-10px);
-  box-shadow: 0 15px 40px rgba(255,43,43,0.25);
+  box-shadow: 0 18px 40px rgba(255,43,43,0.25);
 }
 
-.offer-badge{
+.offers .offer-grid .offer-card .offer-badge{
   display: inline-block;
   background: #ff2b2b;
   padding: 6px 14px;
-  font-size: 12px;
   border-radius: 30px;
+  font-size: 12px;
+  font-weight: 700;
   margin-bottom: 18px;
-  font-weight: 600;
 }
 
-.offer-card h3{
-  font-size: 32px;
+.offers .offer-grid .offer-card h3{
+  font-size: 34px;
   margin-bottom: 10px;
 }
 
-.offer-card p{
+.offers .offer-grid .offer-card p{
   font-size: 17px;
   color: #eee;
 }
@@ -1877,6 +1800,94 @@ h1, h2, h3, h4 {
   color: #888;
 }
 
+/* =============================== FLOATING WHATSAPP BUTTON ================================= */
+.float-whatsapp{
+  position: fixed;
+  right: 25px;
+  bottom: 25px;
+  width: 65px;
+  height: 65px;
+  background: linear-gradient(135deg, #25D366, #1ebe5d);
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+  text-decoration: none;
+  z-index: 9999;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.25);
+  transition: all 0.35s ease;
+  animation: whatsappFloat 2s ease-in-out infinite;
+  overflow: visible;
+}
+
+.float-whatsapp i{
+  transition: transform 0.3s ease;
+}
+
+.float-whatsapp:hover{
+  transform: translateY(-6px) scale(1.08);
+  box-shadow: 0 18px 35px rgba(37, 211, 102, 0.4);
+}
+
+.float-whatsapp:hover i{
+  transform: rotate(10deg) scale(1.15);
+}
+
+.float-whatsapp::before{
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background: rgba(37, 211, 102, 0.35);
+  animation: pulseRing 2s infinite;
+  z-index: -1;
+}
+
+.float-whatsapp .whatsapp-tooltip{
+  position: absolute;
+  right: 75px;
+  background: #111;
+  color: #fff;
+  padding: 10px 14px;
+  border-radius: 8px;
+  font-size: 14px;
+  white-space: nowrap;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateX(10px);
+  transition: all 0.3s ease;
+}
+
+.float-whatsapp:hover .whatsapp-tooltip{
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(0);
+}
+
+@keyframes whatsappFloat{
+  0%,100%{
+    transform: translateY(0);
+  }
+  50%{
+    transform: translateY(-6px);
+  }
+}
+
+@keyframes pulseRing{
+  0%{
+    transform: scale(1);
+    opacity: 0.6;
+  }
+  70%{
+    transform: scale(1.6);
+    opacity: 0;
+  }
+  100%{
+    opacity: 0;
+  }
+}
 
 
 /* ==================================================================== 
@@ -1966,9 +1977,12 @@ h1, h2, h3, h4 {
   }
 
   .hero-inner h1 {
-    font-size: 2.6rem;
+    font-size: 3.2rem;
   }
 
+  .hero-stat {
+    min-width: 140px;
+  }
   .about-container {
     grid-template-columns: 1fr;
   }
@@ -1981,12 +1995,12 @@ h1, h2, h3, h4 {
     font-size: 2rem;
   }
 
-  .offer-grid{
+  .offers .offer-grid{
     grid-template-columns: repeat(2,1fr);
   }
 
   .offers .section-header h2{
-    font-size: 36px;
+    font-size: 34px;
   }
   .why-grid {
     grid-template-columns: repeat(2, 1fr);
@@ -2042,19 +2056,40 @@ h1, h2, h3, h4 {
   .navbar.scrolled {
     background: rgba(0, 0, 0, 0.95) !important;
   }
-
-  .hero-inner h1 {
-    font-size: 2.4rem;
-  }
-
-  .hero-inner p {
-    font-size: 1.05rem;
-  }
-
+  
   .section-header h2 {
     font-size: 2rem;
   }
 
+  .hero-content {
+    padding: 110px 5% 60px;
+  }
+
+  .hero-inner h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero-inner p {
+    font-size: 1rem;
+  }
+
+  .hero-badge {
+    font-size: 0.85rem;
+    padding: 10px 18px;
+  }
+
+  .hero-stats {
+    gap: 12px;
+  }
+
+  .hero-stat {
+    min-width: 120px;
+    padding: 14px;
+  }
+
+  .hero-stat h3 {
+    font-size: 1.3rem;
+  }
   .img-box img {
     height: 200px;
   }
@@ -2062,7 +2097,7 @@ h1, h2, h3, h4 {
     padding: 80px 5%;
   }
 
-  .offer-grid{
+  .offers .offer-grid{
     grid-template-columns: 1fr;
   }
 
@@ -2070,12 +2105,8 @@ h1, h2, h3, h4 {
     font-size: 30px;
   }
 
-  .offer-card{
+  .offers .offer-grid .offer-card{
     padding: 35px 20px;
-  }
-
-  .offer-card h3{
-    font-size: 28px;
   }
   .trust-container {
     grid-template-columns: repeat(2, 1fr);
@@ -2100,6 +2131,17 @@ h1, h2, h3, h4 {
 
   .cta-booking p {
     font-size: 1rem;
+  }
+  .float-whatsapp{
+    width: 58px;
+    height: 58px;
+    font-size: 26px;
+    right: 18px;
+    bottom: 18px;
+  }
+
+  .float-whatsapp .whatsapp-tooltip{
+    display: none;
   }
 }
 
@@ -2188,19 +2230,36 @@ h1, h2, h3, h4 {
 }
 
 @media (max-width: 480px) {
-  .hero-inner h1 {
-    font-size: 1.9rem;
-  }
 
   .card-content {
     padding: 15px;
+  }
+  .hero-inner h1 {
+    font-size: 2rem;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .hero-buttons .btn {
+    width: 100%;
+  }
+
+  .hero-stats {
+    flex-direction: column;
+  }
+
+  .scroll-down {
+    display: none;
   }
 
   .book-btn {
     padding: 6px 14px;
     font-size: 0.75rem;
   }
-  .section-header h2{
+  .offers .section-header h2{
     font-size: 26px;
   }
 
@@ -2208,12 +2267,19 @@ h1, h2, h3, h4 {
     font-size: 14px;
   }
 
-  .offer-card h3{
-    font-size: 24px;
+  .offers .offer-grid .offer-card h3{
+    font-size: 26px;
   }
 
-  .offer-card p{
+  .offers .offer-grid .offer-card p{
     font-size: 15px;
   }
 
+  .float-whatsapp{
+    width: 54px;
+    height: 54px;
+    font-size: 24px;
+    right: 15px;
+    bottom: 15px;
+  }
 }
